@@ -19,12 +19,16 @@ addForm.addEventListener('submit', function(e){
     const bookName = document.createElement('span')
     const deleteBtn = document.createElement('span')
 
+    // add content
+    deleteBtn.textContent = 'delete'
+    bookName.textContent = value
+
+    // add classes
+    bookName.classList.add('name')
+    deleteBtn.classList.add('delete')
+
     // append to document (Jeb pievienot pie)
     li.appendChild(bookName)
     li.appendChild(deleteBtn)
     list.appendChild(li)
-
-    // add content
-    deleteBtn.textContent = 'delete'
-    bookName.textContent = value
 })
